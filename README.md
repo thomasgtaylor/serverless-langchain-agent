@@ -1,6 +1,6 @@
 # Serverless LangChain Agent
 
-A production-ready serverless LangChain agent built with AWS Lambda, FastAPI, and AWS CDK.
+A serverless LangChain agent built with AWS Lambda, FastAPI, and AWS CDK.
 
 ## Features
 
