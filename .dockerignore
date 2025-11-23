@@ -1,0 +1,38 @@
+# CDK
+iac/
+cdk.out/
+.cdk.staging/
+cdk.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docs
+*.md
+README.md
+
+# Other
+.python-version
+.ruff_cache

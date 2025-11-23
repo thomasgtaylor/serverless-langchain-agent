@@ -1,0 +1,27 @@
+services:
+  agent:
+    build:
+      context: .
+      platforms:
+        - linux/amd64
+      target: development
+    image: langchain-agent
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/.aws:/root/.aws:ro
+    environment:
+      - PORT=8080
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHECKPOINTS_TABLE_NAME=${CHECKPOINTS_TABLE_NAME:-checkpoints}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-}
+      - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN:-}
+    develop:
+      watch:
+        - action: sync
+          path: ./agent
+          target: /app/agent
+        - action: rebuild
+          path: ./pyproject.toml

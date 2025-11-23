@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Pytest
+.pytest_cache
+
+# Ruff
+.ruff_cache
+
+# Virtual environments
+.venv
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# Zed
+.zed
+
+# AI
+.claude
