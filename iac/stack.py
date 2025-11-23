@@ -34,6 +34,7 @@ class ServerlessLangChainAgentStack(Stack):
             ),
             sort_key=dynamodb.Attribute(name="SK", type=dynamodb.AttributeType.STRING),
             billing_mode=dynamodb.BillingMode.PAY_PER_REQUEST,
+            time_to_live_attribute="ttl",
         )
 
         func = lambda_.DockerImageFunction(
