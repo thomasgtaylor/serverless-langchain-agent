@@ -26,16 +26,16 @@ A serverless LangChain agent built with AWS Lambda, FastAPI, and AWS CDK.
 GET /healthz
 ```
 
-### Research Agent (Non-streaming)
+### Agent (Non-streaming)
 ```
-POST /agents/research
+POST /chat
 ```
 
 Returns complete agent response.
 
-### Research Agent (Streaming)
+### Agent (Streaming)
 ```
-POST /agents/research/stream
+POST /chat/stream
 ```
 
 Returns Server-Sent Events (SSE) stream with agent steps.
